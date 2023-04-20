@@ -1,6 +1,6 @@
 # tc-auth-quarkus
 
-Project backend for TrinityCore Auth Server
+Project backend for TrinityCore 3.3.5 Auth Server
 
 Provides next endpoints:
 ![swagger](https://user-images.githubusercontent.com/2619928/233469713-51737efb-9f63-4f41-887d-cb29924189c0.png)
