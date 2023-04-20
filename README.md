@@ -1,5 +1,11 @@
 # tc-auth-quarkus
 
+Project backend for TrinityCore Auth Server
+
+Provides next endpoints:
+![swagger](https://user-images.githubusercontent.com/2619928/233469713-51737efb-9f63-4f41-887d-cb29924189c0.png)
+
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
