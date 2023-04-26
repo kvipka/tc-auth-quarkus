@@ -16,7 +16,7 @@ import static com.restapicode.utils.Utils.*;
 public class AuthServiceImpl implements AuthService {
     @Override
     public Response getAccount(String userName) {
-        Account account = Account.findByUsername(userName);
+        Account account = Account.findByUsername(userName.toUpperCase());
         if (account == null) {
             return Response.status(Response.Status.OK)
                     .entity(new CustomResponse("getAccount", String.format("Account %s does not exist", userName)))
@@ -29,7 +29,7 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public Response verifyAccount(AccountVerifyRq accountVerifyRq) {
-        Account account = Account.findByUsername(accountVerifyRq.getAccount_name());
+        Account account = Account.findByUsername(accountVerifyRq.getAccount_name().toUpperCase());
         if (account == null) {
             return Response.status(Response.Status.OK)
                     .entity(new CustomResponse("verifyAccount", String.format("Account %s does not exist", accountVerifyRq.getAccount_name())))
@@ -49,7 +49,7 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public Response createAccount(AccountCreateRq accountCreateRq) {
-        Account account = Account.findByUsername(accountCreateRq.getAccount_name());
+        Account account = Account.findByUsername(accountCreateRq.getAccount_name().toUpperCase());
         if (account != null) {
             return Response.status(Response.Status.OK)
                     .entity(new CustomResponse("createAccount", String.format("Account %s already exist", accountCreateRq.getAccount_name())))
@@ -69,7 +69,7 @@ public class AuthServiceImpl implements AuthService {
         byte[] verifier = calculateSRP6TCVerifier(accountCreateRq.getAccount_name(), accountCreateRq.getAccount_password(), salt);
 
         Account account = new Account();
-        account.setUsername(accountCreateRq.getAccount_name());
+        account.setUsername(accountCreateRq.getAccount_name().toUpperCase());
         account.setSalt(salt);
         account.setVerifier(verifier);
         account.setEmail(accountCreateRq.getAccount_email());
