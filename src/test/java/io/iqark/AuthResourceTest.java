@@ -1,4 +1,4 @@
-package com.restapicode;
+package io.iqark;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;

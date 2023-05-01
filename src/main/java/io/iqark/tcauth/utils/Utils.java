@@ -1,4 +1,4 @@
-package com.restapicode.utils;
+package io.iqark.tcauth.utils;
 
 import org.apache.commons.lang3.ArrayUtils;
 

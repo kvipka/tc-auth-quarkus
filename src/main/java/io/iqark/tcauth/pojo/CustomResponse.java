@@ -1,4 +1,4 @@
-package com.restapicode.pojo;
+package io.iqark.tcauth.pojo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

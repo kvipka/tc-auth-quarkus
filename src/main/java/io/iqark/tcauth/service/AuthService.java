@@ -1,9 +1,9 @@
-package com.restapicode.service;
+package io.iqark.tcauth.service;
 
-import com.restapicode.pojo.AccountCreateRq;
-import com.restapicode.pojo.AccountVerifyRq;
+import io.iqark.tcauth.pojo.AccountCreateRq;
+import io.iqark.tcauth.pojo.AccountVerifyRq;
 
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response;
 
 public interface AuthService {
     Response getAccount(String userName);

@@ -1,16 +1,16 @@
-package com.restapicode.service.impl;
+package io.iqark.tcauth.service.impl;
 
-import com.restapicode.entity.Account;
-import com.restapicode.pojo.AccountCreateRq;
-import com.restapicode.pojo.AccountVerifyRq;
-import com.restapicode.pojo.CustomResponse;
-import com.restapicode.service.AuthService;
+import io.iqark.tcauth.entity.Account;
+import io.iqark.tcauth.pojo.AccountCreateRq;
+import io.iqark.tcauth.pojo.AccountVerifyRq;
+import io.iqark.tcauth.pojo.CustomResponse;
+import io.iqark.tcauth.service.AuthService;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
-import javax.ws.rs.core.Response;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
+import jakarta.ws.rs.core.Response;
 
-import static com.restapicode.utils.Utils.*;
+import static io.iqark.tcauth.utils.Utils.*;
 
 @ApplicationScoped
 public class AuthServiceImpl implements AuthService {
